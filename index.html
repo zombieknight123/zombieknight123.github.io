@@ -1,26 +1,18 @@
-<!doctype html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>ejercicio1</title>
-	
-
-	
-<link href="style.css" rel="stylesheet" type="text/css">
-</head>
-
-	
-	
-<body>
-	
-	<center>
-	
-		<h1>HOLA persona encargada de las casacas de mi prom</h1>
-	
-	</center>
-	
-<p> Fuiste curioso y escaneaste mi QR. PLS imprimelo con CUIDADO<img src="OIP.jpeg" width="183" height="180" alt=""/> para poder escanear el codigo ya en la casaca en el futuro sin problema. GRACIAS!!!!</p>
-	
-
-</body>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene embedded arjs>
+        <a-marker preset="hiro">
+            <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
+            <a-entity
+            position="0 0 0"
+            scale="0.05 0.05 0.05"
+            gltf-model="your-server/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+            ></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+        </a-scene>
+    </body>
 </html>
